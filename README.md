@@ -1,52 +1,37 @@
-\# 🛡️ AI SOC Analyzer
+# Riley IPS - Intrusion Prevention System
 
+Riley IPS is a Python-based Intrusion Prevention System that monitors logs and detects suspicious activity in real time.
 
+Built by Oluwafemi Alabi  | Riley Consultech Solutions LTD
 
-A real-time Security Operations Center (SOC) analyzer powered by AI.
+## Features
+- Real-time log monitoring
+- Brute-force attack detection
+- Port scan detection
+- Suspicious IP detection
+- Automatic IP blocking
+- Alert system
 
+## Tech Stack
+Python
 
+## How to Run
+1. Make sure Python is installed
+2. Run: py riley_ips_v4.py
+3. Paste a log line to test it
 
-Paste any security log and get instant analysis: Finding, Severity, Impact \& Recommendation.
-
-
-
-\## 🚀 Features
-
-\- Real AI analysis using Groq (OpenAI GPT-OSS 20B)
-
-\- Web Dashboard built with Flask
-
-\- Interactive CLI version
-
-\- Saves reports automatically
-
-
-
-\## 🛠️ Tech Stack
-
-Python, Flask, Groq API, OpenAI SDK, HTML/CSS
-
-
-
-\## ▶️ How to Run
-
-1\. Get free API key from console.groq.com
-
-2\. Paste key in `app.py`
-
-3\. Run: `py app.py`
-
-4\. Open: http://localhost:5000
-
-
-
-\## 📸 Demo
-
-Paste: `Failed login 500 times in 5 minutes`
-
+## Demo
+Paste: Failed login 500 times in 5 minutes
 Result: Critical Brute-Force Attack Detected
 
+## Files
+- riley_ips_v4.py - Main program
+- riley_ips_v4.txt - Documentation / notes
+-
+## 📱 WhatsApp Alert
 
+When an intrusion is detected, Riley IPS will automatically send you a WhatsApp alert so you can act fast.
 
-Built by Oluwafemi Alabi
-
+![WhatsApp Alert](whatsapp-alert.png)
+-
+- <img width="537" height="171" alt="Screenshot 2026-11-18 130656" src="https://github.com/user-attachments/assets/f950a83c-7f81-46ad-bc0f-70ed5794873d" />
