@@ -35,3 +35,5 @@ When an intrusion is detected, Riley IPS will automatically send you a WhatsApp 
 ![WhatsApp Alert](whatsapp-alert.png)
 -
 - <img width="537" height="171" alt="Screenshot 2026-11-18 130656" src="https://github.com/user-attachments/assets/f950a83c-7f81-46ad-bc0f-70ed5794873d" />
+## 📊 Sample Report
+View the detection report: [report.html](report.html)
