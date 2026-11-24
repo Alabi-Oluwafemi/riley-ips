@@ -47,22 +47,8 @@
 
 ## 🛠️ For Developers (Run From Source)
 
-If you want to run the Python source code:
-
 ```powershell
 git clone https://github.com/Alabi-Oluwafemi/riley-ips.git
 cd riley-ips
 pip install -r requirements.txt
 python riley_unified_grid.py
-
-| Suspicious Python / PowerShell | Outbound to known C2 IP | **Auto-Kill + Log** |
-
-**Real Test - 16:16:36:**
-
-# Test the Auto-Kill (Safe Test):
-py -c "import socket; s=socket.socket(); s.connect(('13.216.200.40', 4444))"
-
-💼 Riley Consultech Solutions - SOC Packages
-Built by Alabi Oluwafemi - Riley Consultech SolutionsPackagePriceForBasic Protection₦75,000 / month1 PC - File Grid OnlyProfessional SOC₦350,000 / monthUp to 10 PCs - Full IPS + Auto-Kill + DashboardEnterprise SOCCustomUnlimited + 24/7 Monitoring📧 Contact for Setup: Open an Issue or DM on LinkedIn
-
-📁 Files in this RepoRileyGrid-v2.3.exe - In Releases - Ready to runriley_unified_grid.py - Main source codeunified_dashboard.html - Live dashboardrequirements.txt - Python dependencies⚖️ DisclaimerThis tool is for defensive security and authorized testing only. Only run on systems you own or have permission to protect.© 2026 Riley Consultech Solutions. All rights reserved.
