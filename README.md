@@ -72,9 +72,9 @@ Dashboard shows `CRITICAL` → `KILLED` in the same second.
 **Requirements:** Windows 10/11 + Python 3.10+
 
 ```powershell
-# 1. Clone
-git clone https://github.com/uncleriley089/riley-unified-grid.git
-cd riley-unified-grid
+git clone https://github.com/Alabi-Oluwafemi/riley-ips.git
+cd riley-ips
+py riley_unified_grid.py
 
 # 2. Verify file (no errors = perfect)
 py -m py_compile riley_unified_grid.py
