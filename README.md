@@ -1,12 +1,10 @@
+# 🛡️ Riley Unified Grid v2.3 - File + Network IPS with Auto-Kill
+
 Stop attacks in 1 second. No Python needed.
 
 📧 [LinkedIn - Alabi Oluwafemi](https://www.linkedin.com/in/oluwafemi-alabi-)
 
-# 🛡️ Riley Unified Grid v2.3 - File + Network IPS with Auto-Kill
-
-**Stop attacks in 1 second. No Python needed.**
-
-> Detects ransomware files + C2 reverse shells and **kills the attacker process automatically.**
+> Detects ransomware files + C2 reverse shells and kills the attacker process automatically.
 
 ![Version](https://img.shields.io/badge/version-v2.3-red)
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
