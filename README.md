@@ -1,3 +1,7 @@
+Stop attacks in 1 second. No Python needed.
+
+📧 [LinkedIn - Alabi Oluwafemi](https://www.linkedin.com/in/oluwafemi-alabi-)
+
 # 🛡️ Riley Unified Grid v2.3 - File + Network IPS with Auto-Kill
 
 **Stop attacks in 1 second. No Python needed.**
@@ -70,3 +74,5 @@ Built by **Alabi Oluwafemi - Riley Consultech Solutions**
 This tool is for **defensive security and authorized testing only**. Only run on systems you own or have permission to protect.
 
 **© 2026 Riley Consultech Solutions. All rights reserved.**
+
+📧 **Contact for Interviews / Purchase:** [LinkedIn - Alabi Oluwafemi](https://www.linkedin.com/in/oluwafemi-alabi-)
