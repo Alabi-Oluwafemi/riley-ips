@@ -52,3 +52,21 @@ git clone https://github.com/Alabi-Oluwafemi/riley-ips.git
 cd riley-ips
 pip install -r requirements.txt
 python riley_unified_grid.py
+
+## 💼 Riley Consultech Solutions - SOC Packages
+
+Built by **Alabi Oluwafemi - Riley Consultech Solutions**
+
+| Package | Price | For |
+| :--- | :--- | :--- |
+| **Basic Protection** | ₦75,000 / month | 1 PC - File Grid Only |
+| **Professional SOC** | ₦350,000 / month | Up to 10 PCs - Full IPS + Auto-Kill + Dashboard |
+| **Enterprise SOC** | Custom | Unlimited + 24/7 Monitoring |
+
+---
+
+## ⚖️ Disclaimer
+
+This tool is for **defensive security and authorized testing only**. Only run on systems you own or have permission to protect.
+
+**© 2026 Riley Consultech Solutions. All rights reserved.**
