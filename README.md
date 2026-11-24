@@ -1,103 +1,68 @@
-# 🛡️ RILEY UNIFIED GRID v2.3
-### File + Network Intrusion Prevention System (IPS) with Auto-Kill
+# 🛡️ Riley Unified Grid v2.3 - File + Network IPS with Auto-Kill
 
-**Built by Oluwafemi Alabi — Riley Consultech**
+**Stop attacks in 1 second. No Python needed.**
 
-Riley Unified Grid is a lightweight, real-time Intrusion Prevention System for Windows that monitors your files and your network at the same time — and fights back automatically.
+> Detects ransomware files + C2 reverse shells and **kills the attacker process automatically.**
 
-It doesn't just detect attacks. It kills them.
+![Version](https://img.shields.io/badge/version-v2.3-red)
+![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
-## 🚀 What It Does
+## ⬇️ Download for Windows (No Python Needed)
 
-| Grid | What It Monitors | What It Does |
+**For Clients / Business Users - Just Download & Run:**
+
+👉 **[Download RileyGrid-v2.3.exe](https://github.com/Alabi-Oluwafemi/riley-ips/releases/tag/v2.3)** 👈
+
+1. Download `RileyGrid-v2.3.exe` from Releases
+2. Right-click → **Run as Administrator**
+3. Done. You are protected.
+
+> ⚠️ Windows will say "Unknown Publisher" → Click `More info` → `Run anyway`. This is normal for new security tools.
+
+---
+
+## 🔥 What It Does - Proven Live
+
+| Threat | Detection | Action |
 | :--- | :--- | :--- |
-| **FILE GRID** | Downloads folder | Quarantines malware, flags double-extension tricks, fake docs, and malicious keywords |
-| **NETWORK GRID** | All outbound TCP connections | Detects C2 connections, port scans, and suspicious ports |
-| **AUTO-KILL** | C2 processes | Automatically terminates the attacking process in < 1 second |
+| Ransomware File Created | `.locked`, `.encrypted`, `.pay` in Downloads | **Auto-Quarantine + Alert** |
+| C2 / Reverse Shell | Connection to port `4444`, `1337`, `8080` | **Auto-Kill Process in <1s** |
+
 
 ---
 
-## ✨ Key Features
+## ✨ Features - v2.3
 
-- **Real-Time File IPS** — Scans every new file in Downloads, quarantines on score >= 70
-- **Real-Time Network IPS** — Monitors `netstat` every 3 seconds for C2, scans, and suspicious ports
-- **Auto-Kill Engine** — Kills C2 processes on ports `4444` and `31337` automatically via `taskkill /F`
-- **Smart Whitelist** — VPNs, browsers, and trusted apps are never flagged. Normalization handles `pia-service.exe` vs `pia_service.exe`, case, and spacing
-- **Live Dashboard** — Auto-refreshing HTML SOC dashboard in `Downloads/unified_dashboard.html`
-- **JSON Logging** — Full event log in `Downloads/unified_grid_log.json`
-- **Zero Dependencies** — Pure Python standard library. No installs. No cloud. No telemetry.
-
----
-
-## 📸 Live Kill Proof <img width="1085" height="466" alt="Screenshot 2026-11-24 145344" src="https://github.com/user-attachments/assets/26ff1f05-78a4-48a0-ae51-bf7fcfa839c4" />
-<img width="1353" height="587" alt="Screenshot 2026-11-24 144227" src="https://github.com/user-attachments/assets/638668ec-8d59-466c-bcc3-e400a81821fd" />
-
-Real test, real kill — 1 second from detection to termination:
-
-
-
-Dashboard shows `CRITICAL` → `KILLED` in the same second.
-
-**False-positive test:** With VPN on, Grid runs at `Events: 0` — no alerts for trusted VPN traffic.
+- **Unified Grid** - File Grid + Network Grid in ONE dashboard
+- **Auto-Kill Engine** - Kills C2 processes automatically, no manual action
+- **Live Dashboard** - `unified_dashboard.html` with real-time events
+- **File Watcher** - Monitors Downloads, Documents, Desktop for ransomware
+- **Network Watcher** - Monitors all outbound connections
+- **Zero Dependencies** - EXE version needs no Python
 
 ---
 
-## ⚙️ Detection Logic
+## 🛠️ For Developers (Run From Source)
 
-### File Grid Scoring
-| Signal | Score |
-| :--- | :--- |
-| Malicious keyword (`mimikatz`, `meterpreter`, `reverse_shell`, `keylogger`, `powershell -enc`) | +40 |
-| Double extension (`.pdf.exe`, `.docx.exe`, `.jpg.exe`) | +30 |
-| EXE from Temp folder | +20 |
-
-- **Score >= 70:** File moved to `_RILEY_QUARANTINE` → `BLOCKED`
-- **Score >= 30:** Flagged → `WARNING`
-
-### Network Grid
-| Signal | Action |
-| :--- | :--- |
-| Connection to C2 port `4444`, `31337` | `CRITICAL` + Auto-Kill |
-| Connection to suspicious port `5555, 6666, 6667, 8080, 9001, 1337, 12345, 54321` | `WARNING` |
-| 15+ ports to same IP in 10s | `CRITICAL` — Port Scan Detected |
-| Private IPs (`10.x`, `192.168.x`, `127.0.0.1`) | Ignored |
-| Whitelisted processes | Ignored |
-
----
-
-## 🛠️ Installation
-
-**Requirements:** Windows 10/11 + Python 3.10+
+If you want to run the Python source code:
 
 ```powershell
 git clone https://github.com/Alabi-Oluwafemi/riley-ips.git
 cd riley-ips
-py riley_unified_grid.py
+pip install -r requirements.txt
+python riley_unified_grid.py
 
-# 2. Verify file (no errors = perfect)
-py -m py_compile riley_unified_grid.py
+| Suspicious Python / PowerShell | Outbound to known C2 IP | **Auto-Kill + Log** |
 
-# 3. Run
-py riley_unified_grid.py
+**Real Test - 16:16:36:**
 
-# You'll see
-RILEY UNIFIED GRID v2.3 - FILE + NETWORK + AUTO-KILL
-[FILE GRID] Started - Watching Downloads...
-[NETWORK GRID] Started - Watching Connections + Auto-Kill ON...
+# Test the Auto-Kill (Safe Test):
+py -c "import socket; s=socket.socket(); s.connect(('13.216.200.40', 4444))"
 
+💼 Riley Consultech Solutions - SOC Packages
+Built by Alabi Oluwafemi - Riley Consultech SolutionsPackagePriceForBasic Protection₦75,000 / month1 PC - File Grid OnlyProfessional SOC₦350,000 / monthUp to 10 PCs - Full IPS + Auto-Kill + DashboardEnterprise SOCCustomUnlimited + 24/7 Monitoring📧 Contact for Setup: Open an Issue or DM on LinkedIn
 
-# To view live dashboard
-Start-Process "$env:USERPROFILE\Downloads\unified_dashboard.html"
-
-Test Auto-Kill (Safe)
-Keep Grid running in Window 1. In Window 2:powershellpy -c "import socket, time; s=socket.create_connection(('portquiz.net', 4444)); print('Connected'); time.sleep(15)"Expected: Grid logs CRITICAL → KILLED for python.exe in 1 second.
-
-⚠️ Do NOT test with PowerShell's $client.Connect() — Auto-Kill will kill PowerShell itself. Use the Python test above.
-
-Built in Lagos, Nigeria. 🇳🇬
-Detect. Kill. Protect.
-
-Real test, real kill — 1 second from detection to termination:
-
+📁 Files in this RepoRileyGrid-v2.3.exe - In Releases - Ready to runriley_unified_grid.py - Main source codeunified_dashboard.html - Live dashboardrequirements.txt - Python dependencies⚖️ DisclaimerThis tool is for defensive security and authorized testing only. Only run on systems you own or have permission to protect.© 2026 Riley Consultech Solutions. All rights reserved.
